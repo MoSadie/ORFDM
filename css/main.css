@@ -1,0 +1,19 @@
+body {
+	background-color: black;
+}
+
+p, h1, h2, h3 {
+	color: white;
+}
+
+.center {
+	text-align: center;
+}
+
+.announcement {
+    display: block;
+    border: 5px solid grey;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+}
