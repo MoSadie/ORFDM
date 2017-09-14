@@ -1,12 +1,6 @@
 <html>
 <head>
 <title>ORFDM+</title>
-<script src="https://code.jquery.com/jquery-3.2.1.js"/>
-<script>
-$(function() {
-	Debug.print("Hi")
-})
-</script>
 </head>
 <body>
 <?php
