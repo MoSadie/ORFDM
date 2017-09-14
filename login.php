@@ -7,8 +7,8 @@
 <body>
 <?php if (isSet($error)) echo "<p style=\"color:red\">".$error."</p>"; ?>
 <h1 style="text-align: center;">Please Login:</h1>
-<form style="margin: auto; text-align:center;" method="POST">
-<input type="password" name="accessCode"></input><br/>
+<form style="margin: auto; text-align:center;" method="post">
+<input type="password" name="accessKey"></input><br/>
 <input type="submit"></input>
 </form>
 </body>

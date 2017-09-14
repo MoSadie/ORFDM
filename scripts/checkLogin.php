@@ -1,9 +1,10 @@
 <?php
-function checkLogin(password) {
-	$dir = new DirectoryIterator(__DIR__."\password");
+function checkLogin($password) {
+	$dir = new DirectoryIterator(dirname(__DIR__).DIRECTORY_SEPARATOR."password".DIRECTORY_SEPARATOR);
 	foreach ($dir as $fileinfo) {
-		if (!$fileinfo->isDot() && $fileinfo->isFile()) {		
-			if (password_verify(password,$fileinfo->getBasename('txt'))) {
+		if (!$fileinfo->isDot() && $fileinfo->isFile()) {	
+			echo $fileinfo->getPathname();
+			if (password_verify($password,file($fileinfo)[0])) {
 				return true;
 			}
 		}
