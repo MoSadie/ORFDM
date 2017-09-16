@@ -123,7 +123,6 @@ setInterval(function() { $("#deadlineHolder > .announcement > .date").each(funct
 	var now = new Date();
 	var then = Date.parse($(this).text());
 	if ((then - now) < 604800000 || then < now) {
-		console.log($(this).text() + " "+ $(this).css("background-color"));
 		switch ($(this).css("background-color")) {
 			case "rgb(255, 255, 255)":
 				$(this).animate({backgroundColor : "red"}, 1000);
