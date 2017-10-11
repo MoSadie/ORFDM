@@ -16,7 +16,7 @@
       <DueDate>"+$dueDate+"</DueDate>
       <Description>"+$description+"</Description>
       <Team>"+$team+"</Team>
-    </DeadLineEntry>"
+    </DeadLineEntry>";
 		}
 	}
 	?>
