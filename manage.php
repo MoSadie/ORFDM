@@ -76,6 +76,8 @@ function createDeadline() {
 	if (title == null) { alert("Cancelled creation."); return; }
 	var owner = prompt("Who owns the deadline?");
 	if (owner == null) { alert("Cancelled creation."); return; }
+	var team = prompt("What team is the deadline for?");
+	if (team == null) { alert("Cancelled creation."); return; }
 	var date = prompt("When is the deadline due? (MM/DD/YYYY)");
 	if (date == null) { alert("Cancelled creation."); return; }
 	var done = false;
@@ -86,7 +88,7 @@ function createDeadline() {
 		else description.push(line);
 	} while (!done);
 	
-	$.post( "scripts/create.php", { accessKey: "<?php echo $_POST["accessKey"] ?>", title: title, fileType: "deadline", owner: owner, description: JSON.stringify(description), date: date }, function(data) {
+	$.post( "scripts/create.php", { accessKey: "<?php echo $_POST["accessKey"] ?>", title: title, fileType: "deadline", owner: owner, description: JSON.stringify(description), date: date, team: team }, function(data) {
 		alert("Deadline created!\nPlease refresh other viewers to update their display.");
 		location.reload();
 	}).fail(function (data) {
