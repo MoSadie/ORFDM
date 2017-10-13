@@ -2,7 +2,7 @@
 <DeadlineDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <DeadLineList>
 	<?php
-	$dir = new DirectoryIterator(__DIR__."\deadlines");
+	$dir = new DirectoryIterator(dirname(__DIR__)."\deadlines");
 	foreach ($dir as $fileinfo) {
 		if (!$fileinfo->isDot() && $fileinfo->isFile()) {
 			$file = array_reverse(file($fileinfo->getPathname()));
