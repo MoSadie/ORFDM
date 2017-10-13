@@ -12,7 +12,7 @@
 			$team = rtrim(array_pop($file));
 			$description = array_reverse($file);
 			foreach ($description as &$line) { $line = rtrim($line); }
-			echo "<DeadLineEntry><Author>".$author."</Author><Title>".$title."</Title><DueDate>".$dueDate."</DueDate><Description>".implode(PHP_EOL,$description)."</Description><Team>".$team."</Team></DeadLineEntry>";
+			echo "<DeadLineEntry><FileName>".$fileinfo->getBaseName('.txt')."</FileName><Author>".$author."</Author><Title>".$title."</Title><DueDate>".$dueDate."</DueDate><Description>".implode(PHP_EOL,$description)."</Description><Team>".$team."</Team></DeadLineEntry>";
 		}
 	}
 	?>
