@@ -8,8 +8,8 @@
 			$file = array_reverse(file($fileinfo->getPathname()));
 			$title = rtrim(array_pop($file));
 			$author = rtrim(array_pop($file));
-			$team = rtrim(array_pop($file));
 			$dueDate = rtrim(array_pop($file));
+			$team = rtrim(array_pop($file));
 			$description = array_reverse($file);
 			foreach ($description as &$line) { $line = rtrim($line); }
 			echo "<DeadLineEntry><Author>".$author."</Author><Title>".$title."</Title><DueDate>".$dueDate."</DueDate><Description>".implode(PHP_EOL,$description)."</Description><Team>".$team."</Team></DeadLineEntry>";
