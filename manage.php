@@ -154,6 +154,7 @@ setInterval(function() { $("#deadlineHolder > .announcement > .date").each(funct
 			$title = rtrim(array_pop($file));
 			$owner = rtrim(array_pop($file));
 			$date = rtrim(array_pop($file));
+			$team = rtrim(array_pop($file));
 			$description = array_reverse($file);
 			foreach ($description as &$line) { $line = rtrim($line); }
 			echo "<div id=\"deadline-".$fileinfo->getBaseName('.txt')."\" class=\"announcement\"><div class=\"left\"><h2>".$title."</h2> <h3>".$owner."</h3></div><div class=\"date\">".$date."</div><br/><div class=\"description\">".implode("<br/>",$description)."</div><button onclick=\"deleteDeadline('".$fileinfo->getBaseName('.txt')."')\">Delete Deadline</button></div><br/>";
@@ -170,6 +171,7 @@ setInterval(function() { $("#deadlineHolder > .announcement > .date").each(funct
 			$title = rtrim(array_pop($file));
 			$owner = rtrim(array_pop($file));
 			$date = rtrim(array_pop($file));
+			$team = rtrim(array_pop($file));
 			$description = array_reverse($file);
 			foreach ($description as &$line) { $line = rtrim($line); }
 			echo "<div id=\"announc-".$fileinfo->getBaseName('.txt')."\" class=\"announcement\"><div class=\"left\"><h2>".$title."</h2> <h3>".$owner."</h3></div><div class=\"description\">".implode("<br/>",$description)."</div><button onclick=\"deleteAnnounc('".$fileinfo->getBaseName('.txt')."')\">Delete Announcement</button></div><br/>";

@@ -33,7 +33,6 @@ setInterval(function() { $("#deadlineHolder > .announcement > .date").each(funct
 	var now = new Date();
 	var then = Date.parse($(this).text());
 	if ((then - now) < 604800000 || then < now) {
-		console.log($(this).text() + " "+ $(this).css("background-color"));
 		switch ($(this).css("background-color")) {
 			case "rgb(255, 255, 255)":
 				$(this).animate({backgroundColor : "red"}, 1000);
@@ -62,6 +61,7 @@ setInterval(function() { $("#deadlineHolder > .announcement > .date").each(funct
 			$title = rtrim(array_pop($file));
 			$owner = rtrim(array_pop($file));
 			$date = rtrim(array_pop($file));
+			$team = rtrim(array_pop($file));
 			$description = array_reverse($file);
 			foreach ($description as &$line) { $line = rtrim($line); }
 			echo "<div class=\"announcement\"><div class=\"left\"><h2>".$title."</h2> <h3>".$owner."</h3></div><div class=\"date\">".$date."</div><br/><div class=\"description\">".implode("<br/>",$description)."</div></div><br/>";
@@ -78,6 +78,7 @@ setInterval(function() { $("#deadlineHolder > .announcement > .date").each(funct
 			$title = rtrim(array_pop($file));
 			$owner = rtrim(array_pop($file));
 			$date = rtrim(array_pop($file));
+			$team = rtrim(array_pop($file));
 			$description = array_reverse($file);
 			foreach ($description as &$line) { $line = rtrim($line); }
 			echo "<div class=\"announcement\"><div class=\"left\"><h2>".$title."</h2> <h3>".$owner."</h3></div><div class=\"description\">".implode("<br/>",$description)."</div></div><br/>";
